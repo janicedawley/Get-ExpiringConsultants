@@ -11,12 +11,12 @@
 # SMTP Information
 
 $From = "ITSecurity@domain.com"
-$CC = "user@domain.com
+$CC = "user@domain.com"
 $SMTPServer = "smtp.domain.com"
 
 # Finds users between $startdate (current date) and $enddate (within 7 days of $startdate)
 
-$startdate = (Get-Date)
+$startdate = (Get-Date)Alos
 $enddate = $startdate.AddDays(7)
 
 #Get list of consultants expiring in the next 7 days.
