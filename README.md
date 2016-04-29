@@ -16,7 +16,7 @@ $SMTPServer = "smtp.domain.com"
 As well as setting the OU Path in:
 ```powershell
 
-$consultants = Get-ADUser -SearchBase "OU=Consultants,DC=corp,DC=com" -Filter { AccountExpirationDate -gt $startdate -and AccountExpirationDate -lt $enddate } -Properties AccountExpirationDate, Manager
+$consultants = Get-ADUser -SearchBase "OU=Consultants,DC=corp,DC=com" -Filter { AccountExpirationDate -gt $startdate -and AccountExpirationDate -lt $enddate } -Properties sAMAccountName,AccountExpirationDate,Manager
 ```
 
 Users will need to have the Manager field filled out in Active Directory in order for this to work.
